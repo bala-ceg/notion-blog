@@ -47,6 +47,10 @@ export default function Contact() {
           Balaji Seetharaman
         </div>
 
+        
+      </div>
+    </>
+
      
   )
 }
