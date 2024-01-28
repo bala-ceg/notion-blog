@@ -33,8 +33,7 @@ export async function getStaticProps({ preview }) {
     .filter(Boolean)
 
   const { users } = await getNotionUsers([...authorsToGet])
-  console.error(`Failed to get tweet embed for ${users}`)
-  const users  = await getNotionUsers([...authorsToGet])
+  
 
   posts.map((post) => {
     post.Authors = post.Authors.map((id) => users[id].full_name)
