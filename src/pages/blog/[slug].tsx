@@ -58,6 +58,8 @@ export async function getStaticProps({ params: { slug }, preview }) {
 
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
+  console.log(`Failed to get tweet embed for ${users}`)
+  console.log(`Failed to get tweet embed for ${post.Authors}`)
 
   return {
     props: {
