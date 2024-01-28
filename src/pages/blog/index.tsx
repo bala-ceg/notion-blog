@@ -41,7 +41,7 @@ export async function getStaticProps({ preview }) {
   
  
   console.error(`Failed to get tweet embed for ${users}`)
-  console.error(`Failed to get tweet embed for ${post.Authors}`)
+ 
   return {
     props: {
       preview: preview || false,
