@@ -33,7 +33,7 @@ export async function getStaticProps({ preview }) {
     .filter(Boolean)
 
   const { users } = await getNotionUsers([...authorsToGet])
-  console.log(`Failed to get tweet embed for ${users}`)
+  console.error(`Failed to get tweet embed for ${users}`)
   const users  = await getNotionUsers([...authorsToGet])
 
   posts.map((post) => {
@@ -41,8 +41,8 @@ export async function getStaticProps({ preview }) {
   })
   
  
-  console.log(`Failed to get tweet embed for ${users}`)
-  console.log(`Failed to get tweet embed for ${post.Authors}`)
+  console.error(`Failed to get tweet embed for ${users}`)
+  console.error(`Failed to get tweet embed for ${post.Authors}`)
   return {
     props: {
       preview: preview || false,
